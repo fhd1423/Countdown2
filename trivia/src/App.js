@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import './index.css'
 
 function App() {
   const [questions, setQuestions] = useState([]);
@@ -45,7 +46,7 @@ function App() {
             {question.answers.map((answer, answerIndex) => (
               <button
                 key={answerIndex}
-                className={`p-2 mb-2 rounded-md cursor-pointer`}
+                className={`p-2 mb-2 rounded-md border-2 border-blue-500 cursor-pointer hover:bg-blue-500`}
                 onClick={() => handleAnswer(questionIndex, answerIndex)}
                 disabled={question.userAnswer !== null}
               >
